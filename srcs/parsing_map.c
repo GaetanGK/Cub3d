@@ -118,6 +118,4 @@ void	ft_map(char *str, t_datar *recup)
 	}
 	recup->nblines = snblines;
 	recup->sizeline = ssizeline;
-/*	if (recup->nblines > 200 || recup->sizeline > 200)
-		ft_error(recup, "Map trop grande pour etre gérée\n"); */
 }
