@@ -93,6 +93,6 @@ int	ft_map_dir_rony_check(char *fichier, t_datar *recup)
 		ft_error(recup, "Invalide : is a directory\n");
 	fd = open(fichier, O_RDONLY);
 	if (fd == -1)
-		ft_error(recup, "Fichier .ber invalide\n");
+		ft_error(recup, "Fichier .map invalide\n");
 	return (fd);
 }
