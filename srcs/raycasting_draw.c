@@ -40,7 +40,7 @@ int	ft_render_rect(t_img *img, t_rect rect)
 	{
 		j = rect.x;
 		while (j < rect.x + rect.width)
-				ft_img_pix_put(img, j++, i, rect.color);
+			ft_img_pix_put(img, j++, i, rect.color);
 		++i;
 	}
 	return (0);
