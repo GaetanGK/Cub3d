@@ -18,13 +18,14 @@ void	ft_swap_line(char **line, char *temp)
 		temp = *line;
 }
 
-int	ft_gnl_cpy(int ret, char *buff, char **line)
+int	ft_gnl_cpy(int ret, char *buff, char **line, int fd)
 {
 	while (ret > 0)
 	{
 		buff[ret] = '\0';
 		if (!ft_copy(line, &buff))
 			return (1);
+		ret = read(fd, buff, BUFFER_SIZE);
 	}
 	return (0);
 }

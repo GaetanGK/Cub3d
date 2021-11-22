@@ -254,7 +254,7 @@ void	ft_data_rays(t_datar *data, t_cast *ray, float ray_angle, int strip_id);
 void	ft_cast_ray_init_next(t_datar *data, t_cast *ray, float ray_angle);
 int		ft_map_dir_rony_check(char *fichier, t_datar *recup);
 void	ft_swap_line(char **line, char *temp);
-int		ft_gnl_cpy(int ret, char *buff, char **line);
+int		ft_gnl_cpy(int ret, char *buff, char **line, int fd);
 int		ft_copy(char **line, char **buff);
 void	ft_map_copy(t_datar *recup, char *str);
 int		ft_glitch(t_datar *data);

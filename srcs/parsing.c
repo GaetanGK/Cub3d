@@ -35,6 +35,7 @@ int	ft_parsing_map(char *fichier, t_datar *recup)
 		free(str);
 	}
 	close(fd);
+	ft_verify_errors(recup);
 	ft_mlx(recup);
 	return (0);
 }

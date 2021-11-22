@@ -54,7 +54,7 @@ MLX = libmlx.a
 
 CC = clang
 
-CFLAGS = -Wall -Wextra -Werror -g
+CFLAGS = -Wall -Wextra -Werror -g -fsanitize=address
 
 .c.o :
 	${CC} ${CFLAGS} ${INC} -c $< -o ${<:.c=.o}

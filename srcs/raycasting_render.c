@@ -66,7 +66,8 @@ void	ft_render_map(t_datar *data)
 				rect2.color = 0X000000;
 			rect2.width = TILE_SIZE * MINIMAP_SCALE_FACTOR;
 			rect2.height = TILE_SIZE * MINIMAP_SCALE_FACTOR;
-			ft_render_rect(&data->img, rect2);
+			if (rect2.x <= WINDOW_WIDTH && rect2.y <= WINDOW_HEIGHT)
+				ft_render_rect(&data->img, rect2);
 			j++;
 		}
 		++i;

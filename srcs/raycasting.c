@@ -67,7 +67,6 @@ int	ft_render(t_datar *data)
 
 int	ft_mlx(t_datar *data)
 {
-	ft_verify_errors(data);
 	ft_init(data);
 	ft_setup(data);
 	mlx_hook(data->win_ptr, KeyPress, KeyPressMask, &ft_handle_keypress, data);

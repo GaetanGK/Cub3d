@@ -99,7 +99,7 @@ int	get_next_line(int fd, char **line, t_datar *recup)
 	if (!buff)
 		return (-1);
 	ret = read(fd, buff, BUFFER_SIZE);
-	if (ft_gnl_cpy(ret, buff, line) == 1)
+	if (ft_gnl_cpy(ret, buff, line, fd) == 1)
 		return (1);
 	if (ret <= 0)
 		return (ft_eof(ret, &buff, line));

@@ -22,15 +22,12 @@ void	ft_img_pix_put(t_img *img, int x, int y, int color)
 		y = 1;
 	else if (x <= 0)
 		x = 1;
-	pixel = img->addr + (y * img->line_len + x * (img->bpp / 8));
-	while (i >= 0)
+	if (x <= WINDOW_WIDTH && y <= WINDOW_HEIGHT)
 	{
-		if (img->endian != 0)
-			*pixel++ = (color >> i) & 0xFF;
-		else
-			*pixel++ = (color >> (img->bpp - 8 - i)) & 0xFF;
-		i -= 8;
+		pixel = img->addr + (y * img->line_len + x * (img->bpp / 8));
+		*(int *)pixel = color;
 	}
+
 }
 
 int	ft_render_rect(t_img *img, t_rect rect)
@@ -43,7 +40,7 @@ int	ft_render_rect(t_img *img, t_rect rect)
 	{
 		j = rect.x;
 		while (j < rect.x + rect.width)
-			ft_img_pix_put(img, j++, i, rect.color);
+				ft_img_pix_put(img, j++, i, rect.color);
 		++i;
 	}
 	return (0);
