@@ -27,7 +27,6 @@ void	ft_img_pix_put(t_img *img, int x, int y, int color)
 		pixel = img->addr + (y * img->line_len + x * (img->bpp / 8));
 		*(int *)pixel = color;
 	}
-
 }
 
 int	ft_render_rect(t_img *img, t_rect rect)

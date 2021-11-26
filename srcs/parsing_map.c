@@ -16,7 +16,7 @@ void	ft_map_fill(t_datar *recup, int i, int j)
 {
 	while (j < (recup->sizeline))
 	{
-		recup->map[i][j] = 1;
+		recup->map[i][j] = recup->map[i][j - 1];
 		j++;
 	}
 	recup->map[i][j] = '\0';
